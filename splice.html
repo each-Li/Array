@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var arr = [1,2,3,5];
+			arr.splice(0,1);//删除 第一个参数为起始位置 第二个参数为删除项
+			console.log(arr);
+			var arr2 = [1,2,3,4,5];
+			arr2.splice(0,1,arr);//第三个参数为插入项 当删除一个插入一个的时候可以视为替换
+			console.log(arr2);
+			var arr3 =  [1,2,3,4,5,6];//第三个参数为插入项 当删除0个插入一个的时候可以视为插入项
+			arr3.splice(0,0,0);
+			console.log(arr3);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
