@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+			  	var arr = [1,2,3,4,4,5,6,2,2,235,98];
+			  	// for循环的方法
+			  	var resule = function(){
+			  		for (var i = 0; i < arr.length; i++) {
+			  			if(arr[i]>5){
+			  				return true
+			  			}
+			  			return false
+			  		}
+			  		
+			  	}
+			  	console.log(resule()) // false
+			  	// every方法
+			  	var resule = arr.every(function(item,index){
+			  		return item>5
+			  	})
+			  	console.log(resule); // false
+			};
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
