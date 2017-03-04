@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+			  	var arr = [1,2,3,4,56,75,623,99];
+			  	// for循环方法
+			  	var resule = function(){
+			  	  	for (var i = 0; i < arr.length; i++) {
+			  	  		if(arr[i]>56){
+			  	  			return true;
+			  	  		}
+			  	  	}  
+			  	  	return false;
+			  	}
+			  	console.log(resule());// ture
+			  	// some方法
+			  	var resule = arr.some(function(item,index){
+			  		return item>56
+			  	})
+			  	console.log(resule);// ture
+			};
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
