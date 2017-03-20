@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var arr = [1,2,34,5,5,6,2,3,56,35,3,2,3,2,2,1];
+		
+		function findNum(arr,attr){
+			if(arr && attr){
+		    var temp;
+		    var newArr = [];
+			var count = 0;
+			for(let i = 0; i<arr.length; i++){
+			    if(arr[i]!=-1){
+			    	temp = arr[i];
+			    	for(let j = 0; j<arr.length; j++){
+			    	    if(temp==arr[j]){
+			    	    	count++;
+			    	    	arr[j] = -1;
+			    	    }
+			    	};
+			    	newArr.push([temp,count]);
+			    	count = 0;
+			    }
+			};
+			for(var i = 0; i<newArr.length; i++){
+			    for(let key of newArr[i]){
+			    	if(attr == newArr[i][0]){
+			    		return newArr[i][1];
+			    	}
+			    }
+			};
+			}else{
+				return '请传入正确的参数！！！'
+			}
+		};
+		var num = findNum(arr,2);
+		console.log(num);
+		/*var num = 0;
+		var temp;
+		var newArr = [];
+		for(var i = 0; i<arr.length; i++){
+		    if(arr[i]!=-1){
+		    	temp = arr[i];
+		    	for(var j = 0; j<arr.length; j++){
+		    	    if(temp == arr[j]){
+		    	    	num++
+		    	    	arr[j]==-1;
+		    	    }
+		    	};
+		    newArr.push({temp:num})
+		    num = 0;
+		    }
+		};
+		
+		console.log(newArr[0].temp);*/
+	</script>
+</html>
